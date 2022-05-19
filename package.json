@@ -1,0 +1,40 @@
+{
+  "dependencies": {
+    "axios": "^0.26.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.8",
+    "morgan": "^1.10.0",
+    "react-scripts": "^5.0.1",
+    "serve": "^13.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "name": "cooksbook",
+  "description": "## General",
+  "version": "1.0.0",
+  "main": "index.js",
+  "engines": {
+    "node": "16.13.2",
+    "npm": "8.1.2"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "build": "cd client && rm -rf build && npm install && npm run build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicklope/CooksBook.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicklope/CooksBook/issues"
+  },
+  "homepage": "https://github.com/nicklope/CooksBook#readme"
+}
