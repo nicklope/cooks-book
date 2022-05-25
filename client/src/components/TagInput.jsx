@@ -25,7 +25,7 @@ const TagInput = () => {
   const createTags = async (e) => {
     e.preventDefault()
     setSubmitted(true)
-    axios.post(`http://localhost:3001/createtags/${ticketId}`, formValue)
+    axios.post(`/createtags/${ticketId}`, formValue)
     
   }
 

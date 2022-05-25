@@ -12,7 +12,7 @@ const FullTicket = () => {
   const [selectedTags, setSelectedTags] = useState([])
 
   const getTicketById = async () => {
-    const response = await axios.get(`http://localhost:3001/recipe/${ticketId}`)
+    const response = await axios.get(`/recipe/${ticketId}`)
     setSelectedTicket(response.data.recipe)
     setSelectedIngredients(response.data.recipe.recipeIngredients)
     setSelectedTags(response.data.recipe.tags)

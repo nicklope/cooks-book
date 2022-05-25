@@ -37,7 +37,7 @@ const NewTicket = () => {
   }
 
   const createRecipe = async () => {
-    axios.post('http://localhost:3001/createrecipe', formValue)
+    axios.post('/createrecipe', formValue)
     navigate('/')
   }
 

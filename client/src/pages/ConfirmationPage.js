@@ -6,7 +6,7 @@ const ConfirmationPage = () => {
   let { ticketId } = useParams()
   let navigate = useNavigate()
   const deleteRecipe = async () => {
-    await axios.delete(`http://localhost:3001/recipe/${ticketId}`)
+    await axios.delete(`/recipe/${ticketId}`)
     navigate('/')
   }
 

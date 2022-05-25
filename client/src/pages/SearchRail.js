@@ -14,9 +14,7 @@ const SearchRail = () => {
   const [fireChecker, setFireChecker] = useState(false)
 
   const grabRecipes = async () => {
-    const response = await axios.get(
-      `http://localhost:3001/search/${searchQuery}`
-    )
+    const response = await axios.get(`/search/${searchQuery}`)
     console.log(response.data.selectedRecipe)
     setRecipes(response.data.selectedRecipe)
   }
@@ -34,10 +32,10 @@ const SearchRail = () => {
     navigate(`/newticket`)
   }
   const fireClickTrue = (ticketId) => {
-    axios.put(`http://localhost:3001/togglefiretrue/${ticketId}`)
+    axios.put(`/togglefiretrue/${ticketId}`)
   }
   const fireClickFalse = (ticketId) => {
-    axios.put(`http://localhost:3001/togglefirefalse/${ticketId}`)
+    axios.put(`/togglefirefalse/${ticketId}`)
   }
   let fire = true
   return (
@@ -67,9 +65,7 @@ const SearchRail = () => {
                   showTicket(recipe._id)
                 }}
                 fireClick={async () => {
-                  const response = await axios.get(
-                    `http://localhost:3001/recipe/${recipe._id}`
-                  )
+                  const response = await axios.get(`/recipe/${recipe._id}`)
 
                   if (response.data.recipe.fire == false) {
                     fireClickTrue(recipe._id)

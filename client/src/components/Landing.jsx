@@ -17,7 +17,7 @@ const Landing = () => {
         />
       <img id="restaurant-landing-image"src={restaurant}/>
     </div>
-    <h1 id='landing-title'>the Foodie network</h1>
+    <h1 id='landing-title'>the foodie network</h1>
   </div>
 )
 }

@@ -20,7 +20,7 @@ const UpdateTicket = () => {
   })
 
   const getTicketById = async () => {
-    const response = await axios.get(`http://localhost:3001/recipe/${ticketId}`)
+    const response = await axios.get(`/recipe/${ticketId}`)
     console.log(response.data.recipe)
     setFormValue(response.data.recipe)
   }
@@ -49,7 +49,7 @@ const UpdateTicket = () => {
   }
 
   const updateRecipe = async () => {
-    axios.put(`http://localhost:3001/updaterecipe/${ticketId}`, formValue)
+    axios.put(`/updaterecipe/${ticketId}`, formValue)
     navigate(`/ticket/${ticketId}`)
   }
 
