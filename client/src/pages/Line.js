@@ -38,7 +38,7 @@ const Line = () => {
     axios.put(`/togglefirefalse/${ticketId}`)
     setFireChecker(false)
   }
-  let fire = 0
+
   return (
     <div>
       <header>

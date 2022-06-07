@@ -18,7 +18,7 @@ const NavBar = (props) => {
   return (
   <div id="navbar">
     <div id={"logo"}>
-    <h1>cooksbook</h1>
+    <h1 id="nav-title">cooksbook</h1>
     <img 
       id="navicon" 
       src ={(logo)} 
