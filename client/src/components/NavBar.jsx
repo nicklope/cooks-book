@@ -1,6 +1,6 @@
 import logo from '../images/481490.png'
 import firelogo from '../images/firelogo.png'
-import firelogored from '../images/firelogored.png'
+import serveicon from '../images/4483612.png'
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 
@@ -25,12 +25,18 @@ const NavBar = (props) => {
       alt ="logo"
       onClick={()=>navigate('/')}
       />
-    
+    <img
+      id="serveicon"
+      src={serveicon}
+      />
     </div>
-    
+    <img id='fireicon' src={props.firelogored ? props.firelogored : firelogo} onClick={()=>navigate("/firerail")}/>
     <div  id="search-form">
-      <img id='fireicon' src={props.firelogored ? props.firelogored : firelogo} onClick={()=>navigate("/firerail")}/>
-      <h1 id='search-title'>search:</h1>
+      
+    <img
+      
+      src={serveicon}
+      />
       <form>
         <div id='search-input'>
           <label>
