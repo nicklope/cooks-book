@@ -178,6 +178,7 @@
 }
 #ticket-end {
   display: flex;
+  flex-direction: column-reverse;
   height: 80%;
   align-self: center;
   margin: 10px;
@@ -203,12 +204,17 @@
   
 }
 #fire-button {
-  height: 70%;
+  height: 50%;
   padding: 3px;
 }
 #fire-button:hover {
   cursor: pointer;
   transform: translateY(10px);
+}
+#recipe-button{
+  height: 50%;
+  padding: 3px;
+  transform: translateY(-12px)
 }
 #fullticket-container {
   display: flex;
@@ -563,9 +569,10 @@
   text-align: center;
   margin-bottom: 260px;
 }
-#serveicon{
+/* #serveicon{
   display: none;
-}
+} */
+
 @keyframes wobble {
   30% {
     transform: translateY(10px);
@@ -626,7 +633,7 @@
   #navbar {
     display: flex;
     height: 8%;
-    flex-direction: row-reverse;
+    flex-direction: row;
     justify-content: right;
     margin: 0 auto;
     padding: 10px;
@@ -642,8 +649,19 @@
     
     
   }
+  .serve-open {
+    animation-name: expand;
+    animation-duration: 1s;
+    animation-fill-mode: forwards
+  }
+  .serve-closed {
+    animation-name: collapsed;
+    animation-duration:1s;
+    animation-fill-mode: forwards;
+  }
   #serveicon{
     display: block;
+    height: 100%;
   }
   #nav-title {
     display: none;
@@ -653,18 +671,34 @@
 
   }
   #search-form{
-    width: 20%;
+    width: 15%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: right;
-    display: none;
+    justify-content: left;
+    overflow: hidden;
+    
   }
-  #search-input{
-    width: 100%;
+
+
+  #ticket-name{
+    font-size: 30px;
   }
-  #search-bar{
-    height: 30px;
+  #ticket-overview{
+    font-size: 24px;
   }
+  @keyframes expand {
+
+    100%  {
+      width: 35%;
+    }
+    
+  
+  }
+  @keyframes collapsed {
+    100%  {    
+      width: 15%;
+    }
+}
 
 }

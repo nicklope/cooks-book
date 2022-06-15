@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import fireLogo from '../images/firelogo.png'
 import fireLogoRed from '../images/firelogored.png'
+import recipeLogo from '../images/2729063.png'
 const Ticket = (props) => {
 const [checked, setChecked] = useState(false)
 const fireClickTrue = (ticketId) => {
@@ -27,9 +28,11 @@ useEffect(()=>{
       <div id="ticket-middle">
         <h1 id="ticket-name">{props.ticketName}</h1>
         <h3 id="ticket-overview">{props.ticketOverview}</h3>
-        <button id="view-ticket-button" onClick={props.onClick}>View Full Ticket</button>
+        {/* <button id="view-ticket-button" onClick={props.onClick}>View Full Ticket</button> */}
+        
       </div>
       <div id="ticket-end">
+      <img  id="recipe-button" src={recipeLogo} onClick={props.onClick}/>
         <input type="checkbox"  id="myCheckbox"  checked={checked}/>
         <label for="myCheckbox" id="fire-checkbox"  >
           <img  id="fire-button" src={checked ? fireLogoRed : fireLogo} onClick={ checked ? () => fireClickFalse(props.imgKey) : () => fireClickTrue(props.imgKey)}/>
